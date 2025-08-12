@@ -16,14 +16,44 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-if nr_letters == 0 or nr_symbols == 0 or nr_numbers == 0 :
-    print("you have entered wrong input .PLEASE TRY AGAIN")
-else:
-    password_letter = [rnd.choice(letters) for _ in range(nr_letters)]
-    password_number = [rnd.choice(numbers) for _ in range(nr_numbers)]
-    password_symbol = [rnd.choice(symbols) for _ in range(nr_symbols)]
-    password_genNEW = password_letter+password_number+password_symbol
+#if nr_letters == 0 or nr_symbols == 0 or nr_numbers == 0 :
+#    print("you have entered wrong input .PLEASE TRY AGAIN")
+#else:
+#    password_letter = [rnd.choice(letters) for _ in range(nr_letters)]
+#    password_number = [rnd.choice(numbers) for _ in range(nr_numbers)]
+#    password_symbol = [rnd.choice(symbols) for _ in range(nr_symbols)]
+#    password = password_letter+password_number+password_symbol
 
-print(f"original password: {(password_genNEW)}")
-rnd.shuffle(password_genNEW)
-print(f"shuffed password: {''.join(password_genNEW)}")
+# password = ""  instead of using empty strg in password we make a list since we need to join them OR append them which is only done in list.
+
+password_list = [] 
+
+for char in range (1, nr_letters + 1):
+    # password_list += rnd.choice(letters) instead of using += we can use .append() fn to add to the list in loop .
+    password_list.append(rnd.choice(letters))
+
+for char in range (1, nr_numbers + 1): 
+    password_list += rnd.choice(numbers) 
+   
+
+for char in range (1, nr_symbols + 1):
+    password_list += rnd.choice(symbols) 
+
+
+print(f"original password list: {(password_list)}")
+print(rnd.shuffle(password_list))            
+# we use the shuffle.() fn as an inbtw fn which means it can't iterate chrs of variable.example ; 
+# had you written print(rnd.shuffle(password_list)) it will return none since it can't process the print fn along with shuffling fn so always write it seperately before printing the list of shuffled chrs.
+
+print(f"shuffed password list: {(password_list)}")
+
+password = "" 
+for char in password_list:
+    password += char
+print(f"final password: {password}")
+
+# typing line 47 to 50 allows us to print the list as a single strng form where all the chars have been added to form one single wording.
+# ex; before coding it will show ==> shuffed password list: ['I', '6', '#', 'a', '+', 'J', 'g', 'I'] 
+# after coding it will show ==> shuffed password list: I6#agI+JgI
+# the code takes the shuffled list generated in line 45 and adds up each chrs of the list to form a password.
+

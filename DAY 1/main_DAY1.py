@@ -1,6 +1,6 @@
 # LESSON 1 :using backslash(\) along with n enters strng in nxt line 
 
-print("this is strnd for line 1 \nthis is strng for line 2")
+print("this is strng for line 1 \n this is strng for line 2")           
 
 
 #LESSON 2 :leaving space ie; " world" OR "hello " can help  create space btw 2 words      OR                                   can use "wrd1" +"" +"wrd2" for indent
@@ -22,7 +22,9 @@ print(len(input("How many chrs in this username?")))
 
 #LESSON 4 :How to switch variable values. 
  
- #trick is to introduce a 3rd variable and correleate      all input values with each other[c=a,a=b,b=c]. In print command use print("a =" + a) which will show               RESULT-->   a = b.
+ #trick is to introduce a 3rd variable and correleate all input values with each other[c=a,a=b,b=c]. 
+      # In print command use print("a =" + a) which will show              
+           #  RESULT-->   a = b.
 
 a= input("a =?")
 b= input("b =?")

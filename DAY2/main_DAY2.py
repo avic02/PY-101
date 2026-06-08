@@ -61,15 +61,15 @@ result= int(BMI_var)
 print(result)
 
 if result > 25 :
- print("your are FAATHH GO TO GYMMMHH")
+ print("your are FAATHH GO TO GYM!!!")
 else :
-  print("you are SLIM LOOKINN ")
+  print("you are SLIM LOOKINN :-o")
 
 # data type conversions : 
 
 print(8 / 3) # thhis gives a float data type whereas,
 
-print(8 // 3) # this will convet it to an int. 
+print(8 // 3) # this will convet it to an int. (removes the decimal )
 
 print(8 / 3 , 3) # result will be rounded off to 3 decimal
 

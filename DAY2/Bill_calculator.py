@@ -7,7 +7,7 @@ bill = float(input("please enter the total bill amt below $:\n"))
 people_counter = int(input("How many people are contributing in total =\n"))
 
 tip_choice = int(
-    input("how much tip would you be providing : 10 , 12 or 15 \n"))
+    input("how much % tip would you be providing : 10 , 12 or 15 \n"))
 
 message = f"your bill total is {bill} which is being split btw {people_counter} with a tip inclusive of {tip_choice}%\n"
 

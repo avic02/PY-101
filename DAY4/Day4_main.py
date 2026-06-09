@@ -1,5 +1,5 @@
 # DAY 4 : LESSON 1 : using random module to seek randomized number with diffrent fn -
-import random   
+import random    
 
 random_integer = random.randint(1, 10)
 print(random_integer)
@@ -19,6 +19,7 @@ print(f"your love score is {love_score}")
 import random 
 
 toss_outcome = random.randint(0,1)
+print(toss_outcome)
 if toss_outcome == 0 :
     print("Tails")
 else :
@@ -36,29 +37,33 @@ states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Conne
 "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado", "North Dakota", "South Dakota", "Montana", 
 "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]    
 
+# Tip!: you can use -ve indexation to start the list from last to first(backward direction) and eliminate the [0>1>2>3] problem
+# ex : in above list if I enter states_of_america[-9] it will return me "Washington" because its at 9th postn not 8th postn.
+
 states_of_america.append("argintina")
 states_of_america.extend(["bangladesh", "pakistan", "nepal"])
 print(states_of_america)
 
-# Code ex : To make a bankers russioan roullete :- the names are entered and picked one out randomly ,this person  has to pay the entire bill
+# Code ex : To make a bankers russian roullete :- the names are entered and picked one out randomly ,this person  has to pay the entire bill
 # using str.split(",") fn we can convert a bunch of strings taken from user into list by seperating by comma.
 
 name_bankers = input("Enter the name of the Bankers here seperated by commas :")
 
 new_names = name_bankers.split(",") 
 
-list_range = len(new_names)
+list_range = len(new_names)    # Here the len() will return the no.of items in the list instead of no.of chrs
 
 # As observed new_names now becomes a list due to the str.split() function 
 # the main problem with this code ex is that you cant enter a range for random module to operate as the names of bankers is not fixed ,it cld be 3 or 10(user dependant)
-# here len() fn can be used to determine no.of strn present inside the list.
+# here len() fn can be used to determine no.of strngs present inside the list.
 
 import random  
-random_banker = random.randint(0 , list_range-1)
-print(f"{random_banker} is going to pay the bill today") 
+random_banker = random.randint(0 , list_range-1) 
+#print(f"{random_banker} is going to pay the bill today")
+print(f"{new_names[random_banker]} get your wallet out cause its turn today!")
 
-# # we do -1 from list because acc .to len() fn the list start from 1 instead of 0 but acc. to list the 1st str is denoted by [0] 
-# # look at Ex of states of america above : the total states acc to len () will come out to be 50 but for list there are 49 states as [0] = Delaware .
+# we do -1 from list because acc .to len() fn the list start from 1 instead of 0 but acc. to list the 1st str is denoted by [0] 
+# look at Ex of states of america above : the total states acc to len () will come out to be 50 but for list there are 49 states as [0] = Delaware .
 # print(f"{new_names[random_banker]} get your wallet out cause its turn today!")
 
 # we can also use random.choice() fn to pick a random item from the list but need to understand the logic behind it as shown above.
@@ -74,8 +79,13 @@ list_3 = ['salt' , 'pepper' , 'soy sauce']
 list_mix_1 = [list_1 + list_2 + list_3]
 print(list_mix_1)
 
+#Concept ! : [Nested list isolation] where once I have created nested list(list_mix_1) if I need to call a specific strng in nested list 
+# ex : if I enter print(list_mix_1[1][3]) this will return => "banana" 
+# Because acc. to nested list [1] means the 2nd list which is list_2 and [3] means the strng inside the list ie;0>1>2> 3=(banana)
+
+
 # Code ex : Treasure Hunt - make a list with row and column specified to mark a coordinate .
-#  Then ask the user to enter a coordinate (row,column) ex; (2,3) means 2nd row 3rd column to mark an 'X' in its place.
+#  Then ask the user to enter a coordinate (row,column) ex; (3,2) means 2nd row 3rd column to mark an 'X' in its place.
 
 row1 = ["⬜️","⬜️","⬜️"]
 row2 = ["⬜️","⬜️","⬜️"]
@@ -86,21 +96,23 @@ print(f"{row1}\n{row2}\n{row3}")
 position  = input("enter the co-ordinate where the treasure chest goes :")
 
 
-horizontal_postn = int(position[0])
-vertical_postn = int(position[1])
+Column_postn = int(position[0])
+row_postn = int(position[1])
 
-print(f"column No is :{horizontal_postn} \n Row No is :{vertical_postn}")
+print(f"column No is :{Column_postn} \n Row No is :{row_postn}")
 
-selected_row = map[vertical_postn - 1]
-selected_row[horizontal_postn - 1] = 'X'  
+selected_row = map[Column_postn - 1]
+selected_row[row_postn - 1] = 'X'  
 
 print(f"{row1}\n{row2}\n{row3}")
 
-# !! tricky to understand : 'selected_row' variable defines the row user needs then in that row the column is defined by using '[]' 
-# for eg; if input says 32{vertical becomes -> '2' & horizontal becomes -> '3'}  
-# then it means 3rd column 2nd row hence selected_row = map[v - 1] ie; selected_row = map[2-1]=> map[1] which for the list means 2nd row because list starts form '0'
+# !! tricky to understand : 
+# 'selected_row' variable defines the row user needs then in that row the column is defined by using '[]' 
+# for eg; if input says 32{row becomes -> '2' & column becomes -> '3'}  
+# then it means 3rd column 2nd row hence selected_row = map[v - 1] 
+# ie; selected_row = map[2-1]=> map[1] which for the list means 2nd row because list starts form '0'
 # now once row is estb then map[1][h-1] => map[1][3-1]=>map[1][2] means ki 2nd row ka 3rd datatype (because list mai 2 = 3rd as there is +1 )
- 
+
 
 
 

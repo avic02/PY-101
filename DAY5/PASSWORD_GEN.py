@@ -1,6 +1,7 @@
 #PROJECT NAME: PASSWORD GENERATOR
 
 # the password generated can be either random or arranged according to preset conditions.
+
 import random as rnd
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 
@@ -41,9 +42,11 @@ for char in range (1, nr_symbols + 1):
 
 
 print(f"original password list: {(password_list)}")
-print(rnd.shuffle(password_list))            
-# we use the shuffle.() fn as an inbtw fn which means it can't iterate chrs of variable.example ; 
-# had you written print(rnd.shuffle(password_list)) it will return none since it can't process the print fn along with shuffling fn so always write it seperately before printing the list of shuffled chrs.
+print(rnd.shuffle(password_list))      
+
+# we use the shuffle.() fn as an in-btw fn which means it can't iterate chrs of variable.
+# ex : had you written print(rnd.shuffle(password_list)) it will return none 
+# since it can't process the print fn along with shuffling fn so always write it seperately before printing the list of shuffled chrs.
 
 print(f"shuffed password list: {(password_list)}")
 
@@ -52,8 +55,8 @@ for char in password_list:
     password += char
 print(f"final password: {password}")
 
-# typing line 47 to 50 allows us to print the list as a single strng form where all the chars have been added to form one single wording.
-# ex; before coding it will show ==> shuffed password list: ['I', '6', '#', 'a', '+', 'J', 'g', 'I'] 
-# after coding it will show ==> shuffed password list: I6#agI+JgI
+# typing line 51 to 54 allows us to print the list as a single strng form where all the chars have been added to form one single wording.
+# ex; before coding it will show ==> orginal password list: ['I', '6', '#', 'a', '+', 'J', 'g', 'I'] 
+# after coding it will show ==> shuffed password list : I6#agI+JgI
 # the code takes the shuffled list generated in line 45 and adds up each chrs of the list to form a password.
 

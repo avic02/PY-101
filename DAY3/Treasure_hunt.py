@@ -73,8 +73,19 @@ if Location == "rural":
 
 
           
-else : 
-          print("WRONG INPUT ENTERED. RETRY ")
+if Location == "Urban":
+    print("you have entered the city of Dwarka . You have entered the college campus of GGSIPU ")
+    choice_1 = input("Where do you wish to go now : Admission Block (A) OR R&D BLOCK(R)")
+    if choice_1 == "A":
+            print("You have entered the admissoions bloock and got caught by the police ")
+            print("You have been Jailed")
+    if choice_1 == "R":
+            print("you have entered the research builiding")
+            choice_2 = input("where do you go ? L OR R")
+            if choice_2 =="L":
+                    print("you have reached the end of the building .")
+                    choice_3 == input("will you jump(J) or not jump(NJ)")
+                    
 
 
           

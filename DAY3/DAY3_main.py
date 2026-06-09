@@ -1,4 +1,5 @@
-# LESSON 1: 'if' or 'else' are used to provide True or False statement which depends on the user input . Also you can use 'elif' which can be a used to create multiple conditions inside the if/else statement :
+# LESSON 1: 'if' or 'else' are used to provide True or False statement which depends on the user input . 
+# Also you can use 'elif' which can be a used to create multiple conditions inside the if/else statement :
 
 print("welcome to ZOOLAHOO Ride at wonderla")
 height = int(input("please enter height in cms:"))
@@ -15,7 +16,8 @@ if height > 140 :
 else:
   print("you are not allowed on this ride sorry")
 
-# There are comparison operators which can be classified : >  , <  , >= (greater than or equal to) ,  <= (less than or equal to) , == (equal to) or != (not equal to) .
+# There are comparison operators which can be classified : >  , <  , >= (greater than or equal to) ,  
+# <= (less than or equal to) , == (equal to) or != (not equal to) 
 
 # you cant use '=' in an if/else fn since this doesnt show a condition and gives syntax ERROR.
 # '=' means you are assigning a value to the variable whereas "==" means you are checking the statement .
@@ -61,9 +63,9 @@ if year % 4 == 0 :
 elif year % 100 == 0 :
   print(f"The year entered {year} is not LEAP YEAR.")
 elif year % 400 == 0 :
- print(f"The year entered {year} is not LEAP     YEAR.")
+ print(f"The year entered {year} is not LEAP YEAR.")
 else :
-  print(f"The year entered {year} is not LEAP     YEAR.")
+  print(f"The year entered {year} is not LEAP YEAR.")
 
 # Remember always layout the map for logic before you start coding to have a bigger picture of project !!
 
@@ -82,11 +84,12 @@ if height > 140 :
 
   if age < 12 :
    bill = 5
-   print("your ticket cost is 5 $")
+   print(f"your ticket cost is {bill} $")
 
   elif age <= 18 :
-    print("your ticket cost is 7 $")
-    bill = 7
+    Bill = 7
+    print(f"your ticket cost is {bill} $")
+    
 
   elif age >= 45 and age <= 55 :
     print("your ticket is on the house . Enjoy your mid life crisis to the fullest.")
@@ -121,7 +124,7 @@ add_cheese = input("Do you wish to add extra cheese in pizza? Y OR N :")
 
 add_pepperonin = input("Do you wish to add extra peperoni in your pizza? Y OR N :")
 
-bill = 0
+bill = 0 
 
 if size == 'S':
   bill += 15
@@ -140,7 +143,7 @@ if add_pepperonin == "Y" :
 
 if add_cheese == "Y" :
     bill += 1
-    (print(f"your outstanding bill along with                   the  add-ons is {bill}\n"))
+    (print(f"your outstanding bill along with the add-ons is {bill}\n"))
 else :
   bill += 0
   (print(f"your outstanding bill along with NO CHEESE is {bill}\n"))
@@ -151,15 +154,15 @@ print('THANK YOU FOR VISITING PYTHON PIZZERIA \n HAVE A NICE DAY CUTIPIE MUAAH!'
 
 #To include multiple conditions in same if/else statements using different conjuctures like and / Or / not .
 
-# e.g; if A> B and A > C                         using AND operator -> both conditions need to be TRUE for the statement to be be interpreted as TRUE.                                                   using OR operator -> any one of 2 conditions need to be TRUE . if both are FALSE then it is FALSE .                                                                             using NOT operator -> you can use this to reverses any condition . so if its TRUE it becomes FALSE and vise-versa.
+# e.g; if A> B and A > C using AND operator -> both conditions need to be TRUE for the statement to be be interpreted as TRUE.                                                   using OR operator -> any one of 2 conditions need to be TRUE . if both are FALSE then it is FALSE .                                                                             using NOT operator -> you can use this to reverses any condition . so if its TRUE it becomes FALSE and vise-versa.
 
-# PROJECT LOVE CALCULATOR :                         TIPS @! : using the .lower () fn we convert our statement into lowercase .                                                               using .count ("") fn you can specify a specific subscript / letter in this case inside ("") to extract that for counting.               REMEMBER !! this count fn is Case Sensitive so 'A' & 'a' is treated diffrently inside same word.
+# PROJECT LOVE CALCULATOR : TIPS @! : using the .lower () fn we convert our statement into lowercase .                                                               using .count ("") fn you can specify a specific subscript / letter in this case inside ("") to extract that for counting.               REMEMBER !! this count fn is Case Sensitive so 'A' & 'a' is treated diffrently inside same word.
 
 print("WELCOME TO LOVE CALCULATOR:")
 
 name_1 = input("please enter your name here:\n")
 name_2 = input("please enter the name of Him/Her:\n")
-
+   
 combined_name = name_1 + name_2
 
 combined_lower = combined_name.lower()
@@ -184,7 +187,7 @@ your_love_score = str(true) + str(love)
 your_love_score = int(your_love_score)
 
 if your_love_score >= 90 or your_love_score <= 10:
- print(f"your love score is {your_love_score}. Start planing the honeymoon swoony")
+ print(f"your love score is {your_love_score}. Start planing the honeymoon sweety")
   
 elif your_love_score >= 40 and your_love_score <= 50 :
   print(f"your love score is {your_love_score}.There is potential keep at it guys!")

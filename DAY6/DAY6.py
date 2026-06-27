@@ -55,7 +55,8 @@ def my_function ():
 # jump()
 
 #---------------------------X----------X---------X----------X-------------------------
-# !!! OR YOU CAN SUBSITUTE CALLING SAME FN MULTIPLE TIMES BY writing this cmd: (6) is the number of hurdles displayed hence the looping occurs six times .
+# !!! OR YOU CAN SUBSITUTE CALLING SAME FN MULTIPLE TIMES BY writing this cmd: 
+# 6 => No. of hurdles displayed hence the looping occurs six times .
 
 #>>  for step in range(6):   
 #       jump_hurdle()       
@@ -66,7 +67,7 @@ def my_function ():
 
 number_of_hurdles = 6
 
-while number_of_hurdles > 0 : # This line of code is TRUE hence the while loop will operate the fn inside the indent till the hurdles become = 5 > 4 ....> 0 , here the loop stops since the statement hurdles > 0 has become FALSE!
+while number_of_hurdles > 0 : # This line of code is "TRUE" hence the while loop will operate the fn inside the indent till the hurdles become = 5 > 4 ....> 0 , here the loop stops since the statement hurdles > 0 has become FALSE!
     print("jump")
     number_of_hurdles -= 1
     print(number_of_hurdles)
@@ -77,7 +78,7 @@ while at_goal() != True:
       jump_hurdle()
       while not at_goal():
           jump()     
-                     #* as soon as the robot reaches the flag it has reached the goal and the while-loop ends.
+                 #* as soon as the robot reaches the flag it has reached the goal and the while-loop ends.
 
 #---------------------------X----------X---------X----------X-------------------------SIDENOTE
 
@@ -122,3 +123,23 @@ while not at_goal():           #this while statement (line 118) operates outside
         
     else:
         move()
+
+#Maze problem answer : hint is to keep the maze bot closer to the right edge stick to it until their is wall in front else turn left.
+#------------------------------------------------------------------------------------------------
+# def turn_right():
+#     for step in range(3):
+#          turn_left()              
+    
+# def walk():
+#     if right_is_clear():
+#         turn_right()
+#         move()
+#     elif front_is_clear():     
+#         move()
+        
+#     else:
+#         turn_left()
+        
+
+# while at_goal() != True :
+#     walk()

@@ -22,15 +22,12 @@ print(logo)
 def find_the_winner (bid_logs):
   winner = ""
   highest_bid = 0
-
-  
   for bidder in bid_logs:
     bid_amt = bid_logs[bidder]
-
     if bid_amt > highest_bid :
       highest_bid = bid_amt
       winner = bidder
-      
+  
   print(f"The winner of the silent auction is {winner} with a bid amt of {highest_bid} $ \n CONGRATULATIONS !!")
 
 bid_logs = {}
